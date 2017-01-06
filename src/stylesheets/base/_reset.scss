@@ -1,0 +1,53 @@
+/*
+ * Use normalize.css for global reset
+ */
+
+@import "normalize.css/normalize";
+
+
+/*
+ * Body styles
+ *
+ * 1. Prevent decorative elements from forcing scrollbar
+ */
+
+html,
+body {
+    overflow-x: hidden; // 1.
+}
+
+
+/*
+ * 1. IE11 main element doesn't have default browser styles
+ */
+
+main {
+    display: block; // 1.
+}
+
+
+/*
+ * Fix box sizing nightmare
+ */
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+
+/*
+ * Responsive Images
+ */
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

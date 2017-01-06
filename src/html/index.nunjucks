@@ -1,0 +1,7 @@
+{% extends 'layouts/main.nunjucks' %}
+
+{% block title %}Static website{% endblock %}
+
+{% block body %}
+    <div id="app"></div>
+{% endblock %}

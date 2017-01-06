@@ -1,0 +1,13 @@
+/*
+ * Default text and font styles
+ */
+
+html {
+    font-size: 62.5%; // 1rem === 10px
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8 / 1.4 * 1em; // 18px line height for 14px text
+}

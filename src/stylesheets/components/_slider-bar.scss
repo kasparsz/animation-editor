@@ -1,0 +1,31 @@
+.slider-bar {
+    position: relative;
+
+    &__line {
+        background: #ff005e;
+        height: 1px;
+        width: 1px;
+        transform-origin: 0% 0%;
+    }
+
+    &__handle {
+        cursor: move;
+
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: -12px;
+        top: -12px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            width: 11px;
+            height: 11px;
+            transform: scale(0.95) rotate(45deg);
+            background: #ff005e;
+        }
+    }
+}
