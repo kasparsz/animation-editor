@@ -2,6 +2,8 @@
 
 Tool to ease creation / editing of CSS animations
 
+WIP - DO NOT USE!
+
 # Getting started
 
 ## Dependencies
