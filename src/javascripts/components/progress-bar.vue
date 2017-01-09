@@ -41,15 +41,16 @@
         },
 
         computed: {
-            ...Vuex.mapGetters(['unitProjection', 'screenProjection', 'screenPan', 'playbackPosition', 'playbackMinimum', 'playbackMaximum', 'playbackLength']),
-            // unitProjection () { return this.$store.getters.unitProjection; },
-            // screenProjection () { return this.$store.getters.screenProjection; },
-            // screenPan () { return this.$store.getters.screenPan; },
+            ...Vuex.mapGetters([
+                'unitProjection',
+                'screenProjection',
+                'screenPan',
 
-            // playbackPosition () { return this.$store.getters.playbackPosition; },
-            // playbackMinimum () { return this.$store.getters.playbackMinimum; },
-            // playbackMaximum () { return this.$store.getters.playbackMaximum; },
-            // playbackLength () { return this.$store.getters.playbackLength; },
+                'playbackPosition',
+                'playbackMinimum',
+                'playbackMaximum',
+                'playbackLength'
+            ]),
 
             ticks () {
                 const labels    = [];
@@ -78,7 +79,7 @@
 
                 for (let i = 0, ii = Math.ceil(units / division); i < ii; i++) {
                     labels.push({
-                        'label': (division / 1000 * i).toFixed(rounding),
+                        'label': i === 0 ? '0' : (division / 1000 * i).toFixed(rounding),
                         'width': width
                     });
                 }
