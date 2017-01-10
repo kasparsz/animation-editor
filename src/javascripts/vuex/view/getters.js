@@ -18,10 +18,12 @@ export const unitProjection = (state) => state.projections.unit;
 export const screenProjection = (state) => state.projections.screen;
 
 export const screenPan = (state) => state.projections.screen.translate;
+export const screenZoom = (state) => state.projections.screen.scale;
 
 
 export default {
     unitProjection,
     screenProjection,
-    screenPan
+    screenPan,
+    screenZoom
 };

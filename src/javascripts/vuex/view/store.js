@@ -1,11 +1,13 @@
-import { VIEW_PAN, VIEW_ZOOM } from '../mutation-types.js';
-
 import getters from './getters.js';
+import actions from './actions.js';
+
+const VIEW_OFFSET = 57;
+
 
 const state = {
     projections: {
         screen: {
-            translate: {x: 40 /* px */, y: 40 /* px */},
+            translate: {x: VIEW_OFFSET /* px */, y: 40 /* px */},
             scale: {x: 240 /* px */, y: 240 /* px */}
         },
         unit: {
@@ -17,14 +19,15 @@ const state = {
 
 // mutations
 const mutations = {
-    [VIEW_PAN] (state, vector) {
-        state.projections.screen.translate.x = vector.x;
+    viewPan (state, vector) {
+        state.projections.screen.translate.x = Math.min(VIEW_OFFSET, vector.x);
         state.projections.screen.translate.y = vector.y;
     },
 
-    [VIEW_ZOOM] (state, vector) {
-        state.projections.screen.scale.x = vector.x;
-        state.projections.screen.scale.y = vector.y;
+    viewZoom (state, vector) {
+        // 24px per 200ms - 480px per 200ms
+        state.projections.screen.scale.x = Math.min(480, Math.max(24, vector.x));
+        state.projections.screen.scale.y = Math.min(100, Math.max(0.01, vector.y));
     }
 };
 
@@ -32,5 +35,6 @@ const mutations = {
 export default {
     state,
     mutations,
-    getters
+    getters,
+    actions
 };

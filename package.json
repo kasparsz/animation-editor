@@ -49,6 +49,7 @@
     "watch": "npm run development"
   },
   "dependencies": {
+    "deep-assign": "^2.0.0",
     "normalize.css": "^5.0.0",
     "vue": "^2.1.8",
     "vuex": "^2.1.1",
