@@ -12,7 +12,13 @@
     "url": "https://github.com/kasparsz/animation-editor.git"
   },
   "keywords": [
-    "buble", "rollup", "sass", "postcss", "nunjucks", "static", "starter"
+    "buble",
+    "rollup",
+    "sass",
+    "postcss",
+    "nunjucks",
+    "static",
+    "starter"
   ],
   "engines": {
     "node": ">= 4.2.1",
@@ -56,24 +62,24 @@
 
     "cpx": "^1.5.0",
     "del-cli": "^0.2.1",
-    "live-server": "^1.1.0",
+    "live-server": "^1.2.0",
     "npm-run-all": "^4.0.0",
 
     "nunjucks-cli": "^0.4.9",
 
-    "node-sass": "^4.1.1",
     "cssnano": "^3.10.0",
+    "node-sass": "^3.10.1",
     "postcss-cli": "^2.6.0",
 
-    "rollup": "^0.40.0",
+    "rollup": "^0.41.1",
     "rollup-plugin-buble": "^0.15.0",
     "rollup-plugin-commonjs": "^7.0.0",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-vue": "^2.2.14",
-    "rollup-watch": "^3.1.0",
     "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-vue": "^2.2.15",
+    "rollup-watch": "^3.2.2",
 
-    "buble": "^0.15.1",
+    "buble": "^0.15.2",
     "uglify-js": "^2.7.5"
   },
   "config": {
