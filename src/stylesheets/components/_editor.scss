@@ -1,4 +1,28 @@
 .editor {
+    color: $color-secondary-4;
+    font-size: 12px;
+    line-height: 20px;
+
     user-select: none;
     cursor: default;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &__header {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: stretch;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+        background: $color-primary-2;
+    }
+
+    &__content {
+        background: $color-primary-1;
+        height: 300px;
+    }
 }

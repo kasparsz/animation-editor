@@ -1,14 +1,21 @@
 <template>
     <div class="editor easing-editor">
-        <progress-bar></progress-bar>
+        <header class="editor__header">
+            <toolbar></toolbar>
+            <playback-bar></playback-bar>
+        </header>
+        <div class="editor__content">
+            <layer-list></layer-list>
+        </div>
     </div>
 </template>
 
 <script>
-    import ProgressBar from './progress-bar.vue';
+    import PlaybackBar from './playback-bar/playback-bar.vue';
+    import Toolbar from './toolbar/toolbar.vue';
+    import LayerList from './layer-list/layer-list.vue';
 
     export default {
-        // store,
-        components: {ProgressBar}
+        components: { PlaybackBar, Toolbar, LayerList }
     }
 </script>

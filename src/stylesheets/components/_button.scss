@@ -1,0 +1,31 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: color $duration-snap $ease-out;
+
+    height: 50px;
+    padding: 0 9px;
+
+    cursor: pointer;
+
+    svg {
+        transition: fill $duration-snap $ease-out, stroke $duration-snap $ease-out;
+        fill: $color-secondary-5;
+    }
+
+    &:hover svg {
+        fill: $color-secondary-2;
+    }
+
+    &.is-disabled {
+        pointer-events: none;
+        opacity: 0.35;
+    }
+}
+
+
+.editor__content .btn {
+    height: 40px;
+}

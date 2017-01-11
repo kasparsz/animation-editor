@@ -44,8 +44,8 @@
     "server": "live-server $npm_package_config_output --wait=16 --port=$npm_package_config_port",
     "clean": "del $npm_package_config_output/*",
 
-    "development": "npm-run-all --parallel build:js build:css build:html && npm-run-all --parallel watch:js watch:css watch:html watch:static server",
-    "production": "npm run clean && npm-run-all --parallel build:js build:css build:html && npm run build:css-clean",
+    "development": "export NODE_ENV=development && npm-run-all --parallel build:js build:css build:html && npm-run-all --parallel watch:js watch:css watch:html watch:static server",
+    "production": "export NODE_ENV=production && npm run clean && npm-run-all --parallel build:js build:css build:html && npm run build:css-clean",
     "watch": "npm run development"
   },
   "dependencies": {

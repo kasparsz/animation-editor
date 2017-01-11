@@ -1,0 +1,11 @@
+.layer-list {
+    color: $color-secondary-5;
+
+    &__inner {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@import "layer-list/layer";

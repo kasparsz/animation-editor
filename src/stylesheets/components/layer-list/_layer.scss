@@ -1,0 +1,54 @@
+.layer {
+    line-height: 38px;
+
+    &__inner {
+        height: 40px;
+        padding: 0 0 0 9px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &.is-active > &__inner {
+        background: rgba($color-primary-2, 0.5);
+    }
+
+    &__children {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Vision button
+    &__vision {
+        transition-property: color, opacity;
+        opacity: 0.25;
+
+        &.is-active {
+            opacity: 1;
+        }
+    }
+
+    // Indention
+    &--property .layer__indent {
+        margin-left: 54px; // vision + icon
+    }
+
+    &__indent--1 { width: 20px; }
+    &__indent--2 { width: 40px; }
+    &__indent--3 { width: 60px; }
+    &__indent--4 { width: 80px; }
+
+    // Icon
+    &__icon {
+        width: 42px;
+    }
+
+    // Title
+    &__title {
+        padding: 2px 0 0 5px;
+
+        .layer--property & {
+            color: $color-primary-3;
+        }
+    }
+}
