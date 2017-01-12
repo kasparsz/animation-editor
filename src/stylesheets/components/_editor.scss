@@ -11,9 +11,14 @@
     right: 0;
     bottom: 0;
 
+    display: flex;
+    flex-direction: column;
+
     &__header {
         position: relative;
         z-index: 1;
+
+        flex: 0 0 auto;
 
         display: flex;
         align-items: stretch;
@@ -24,5 +29,24 @@
     &__content {
         background: $color-primary-1;
         height: 300px;
+
+        flex: 0 1 auto;
+
+        display: flex;
+        align-items: stretch;
     }
+}
+
+%editor-left-side {
+    flex: 0 0 35%;
+    width: 35%;
+    min-width: 280px;
+    max-width: 400px;
+
+    position: relative;
+    z-index: 1;
+}
+
+%editor-right-side {
+    flex: 1 1 auto;
 }

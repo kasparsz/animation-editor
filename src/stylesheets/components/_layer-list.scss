@@ -1,10 +1,26 @@
 .layer-list {
+    @extend %editor-left-side;
+
+    overflow: hidden;
+
     color: $color-secondary-5;
 
     &__inner {
         list-style: none;
         padding: 0;
         margin: 0;
+    }
+
+    // Right side shadow
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+
+        opacity: 0.05;
+        border-right: 1px solid $color-primary-4;
     }
 }
 

@@ -45,10 +45,35 @@
 
     // Title
     &__title {
-        padding: 2px 0 0 5px;
+        flex: 1 1 auto;
+        padding-right: 5px;
 
-        .layer--property & {
+        @extend %transition;
+        transition-property: color;
+
+        &__text {
+            display: inline-block;
+            padding: 2px 0 0 5px;
+        }
+
+        .layer--property &,
+        .layer--invisible & {
             color: $color-primary-3;
+        }
+
+        &__input {
+            padding: 2px 5px 0;
+            margin: 5px 0;
+            border: 0;
+            background: $color-primary-1;
+            outline: none;
+
+            height: 30px;
+            width: 100%;
+
+            color: $color-secondary-5;
+            font-size: 12px;
+            line-height: 16px;
         }
     }
 }

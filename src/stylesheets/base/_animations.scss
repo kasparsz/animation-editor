@@ -6,3 +6,9 @@ $duration-slow: 600ms;
 $ease-in: ease-in;
 $ease-out: ease-out;
 $ease-in-out: ease-in-out;
+
+
+%transition {
+    transition-duration: $duration-snap;
+    transition-timing-function: $ease-out;
+}

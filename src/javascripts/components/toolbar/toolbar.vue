@@ -42,7 +42,7 @@
                 });
             },
             deleteLayer () {
-                this.$store.dispatch('deleteLayer', this.selectedLayer);
+                this.$store.dispatch('deleteLayer', this.selectedProperty || this.selectedLayer);
             }
         },
 

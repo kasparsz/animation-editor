@@ -5,9 +5,14 @@ const VIEW_OFFSET = 57;
 
 
 const state = {
+    content: {
+        width: 0,
+        height: 0
+    },
+
     projections: {
         screen: {
-            translate: {x: VIEW_OFFSET /* px */, y: 40 /* px */},
+            translate: {x: VIEW_OFFSET /* px */, y: 0 /* px */},
             scale: {x: 240 /* px */, y: 240 /* px */}
         },
         unit: {
@@ -19,9 +24,15 @@ const state = {
 
 // mutations
 const mutations = {
+
+    contentSize (state, { width, height }) {
+        state.content.width = width;
+        state.content.height = height;
+    },
+
     viewPan (state, vector) {
         state.projections.screen.translate.x = Math.min(VIEW_OFFSET, vector.x);
-        state.projections.screen.translate.y = vector.y;
+        state.projections.screen.translate.y = vector.y; // Math.max(-state.content.height, Math.min(0, vector.y));
     },
 
     viewZoom (state, vector) {

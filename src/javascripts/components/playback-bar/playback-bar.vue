@@ -43,7 +43,7 @@
             },
 
             handleMouseWheel (event) {
-                const center = Vector(event.clientX).subtract(this.screenPan).divide(this.screenProjection.scale).multiply(this.unitProjection.scale);
+                // const center = Vector(event.clientX).subtract(this.screenPan).divide(this.screenProjection.scale).multiply(this.unitProjection.scale);
                 const zoomX = this.screenZoom.x - event.deltaY / 10;
 
                 this.$store.dispatch('viewZoom', {'x': zoomX, 'y': this.screenZoom.y});

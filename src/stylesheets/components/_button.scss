@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: center;
 
-    transition: color $duration-snap $ease-out;
+    @extend %transition;
+    transition-property: color;
 
     height: 50px;
     padding: 0 9px;
@@ -11,7 +12,9 @@
     cursor: pointer;
 
     svg {
-        transition: fill $duration-snap $ease-out, stroke $duration-snap $ease-out;
+        @extend %transition;
+        transition-property: fill, stroke;
+
         fill: $color-secondary-5;
     }
 

@@ -27,7 +27,11 @@ export const toggleExpanded = (store, id) => {
 };
 
 export const rehydrate = (store, data) => {
-    store.commit('rehydrate', data, null);
+    store.commit('rehydrate', data);
+};
+
+export const updateLayer = (store, info) => {
+    store.commit('updateLayer', info);
 };
 
 
@@ -35,6 +39,8 @@ export default {
     createLayer,
     createProperty,
     deleteLayer,
+
+    updateLayer,
 
     selectLayer,
     selectProperty,

@@ -1,5 +1,5 @@
 .playback-bar {
-    flex: 1 1 auto;
+    @extend %editor-right-side;
     position: relative;
 
     background: $color-primary-2;

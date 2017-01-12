@@ -8,6 +8,7 @@ window.v = new Vue({
     ...App
 });
 
+window.Vue = Vue;
 window.store = store;
 
 store.dispatch('rehydrate', [
@@ -20,6 +21,7 @@ store.dispatch('rehydrate', [
             {
                 'type': 'layer',
                 'title': '.fake',
+                'visible': false
             }
         ]
     },
